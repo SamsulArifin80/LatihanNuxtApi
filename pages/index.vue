@@ -4,12 +4,12 @@
     <main class="container">
       <TheHero />
       <div class="row mb-2">
-        <CardArticle
-          v-for="(article, index) in articles"
-          :key="index"
-          :article="article"/>
+        <CardArticle v-for="(article, index) in articles"
+        :key="index"
+        :article="article" />
       </div>
     </main>
+
   </div>
 </template>
 
@@ -30,21 +30,11 @@ export default {
     }
   },
   async fetch () {
-    await this.$axios.$get('v1/cnn-news')
+    await this.$axios.$get('api/cnn-news')
       .then((res) => { this.articles = res.data })
-    // this.articles = await this.$axios.$get('v1/cnn-news')
   },
-  // async asyncData ({ $axios, route }) {
-  //  const response = await $axios.$get('v1/cnn-news')
-  //  return { articles: response.data }
-  // },
   mounted () {
     console.log('Artikel: ', this.articles)
   }
 }
 </script>
-<style scoped>
-  .article-img img {
-    width: 100%;
-  }
-</style>
