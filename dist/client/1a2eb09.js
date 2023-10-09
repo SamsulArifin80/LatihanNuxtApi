@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{347:function(n,t,e){"use strict";e.r(t);var o={name:"NotifiCation",propos:["message"]},c=e(57),component=Object(c.a)(o,(function(){var n=this;return(0,n._self._c)("div",{staticClass:"notification is-danger"},[n._v("\n    "+n._s(n.message)+"\n")])}),[],!1,null,null,null);t.default=component.exports}}]);

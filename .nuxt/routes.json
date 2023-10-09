@@ -3,35 +3,30 @@
     "name": "auth",
     "path": "/auth",
     "component": "D:\\\\Data Abang\\\\Project\\\\Nuxt\\\\LatihanNuxtApi1\\\\pages\\\\auth.vue",
-    "chunkName": "pages/auth",
-    "_name": "_5834f9a8"
+    "chunkName": "pages/auth"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "D:\\\\Data Abang\\\\Project\\\\Nuxt\\\\LatihanNuxtApi1\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_2444c7d6"
+    "chunkName": "pages/login"
   },
   {
     "name": "profile",
     "path": "/profile",
     "component": "D:\\\\Data Abang\\\\Project\\\\Nuxt\\\\LatihanNuxtApi1\\\\pages\\\\profile.vue",
-    "chunkName": "pages/profile",
-    "_name": "_2fd87d56"
+    "chunkName": "pages/profile"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "D:\\\\Data Abang\\\\Project\\\\Nuxt\\\\LatihanNuxtApi1\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_6e4788a7"
+    "chunkName": "pages/register"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Data Abang\\\\Project\\\\Nuxt\\\\LatihanNuxtApi1\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2435f8fe"
+    "chunkName": "pages/index"
   }
 ]
