@@ -75,6 +75,10 @@ export default async (ssrContext) => {
 
   // Remove query from url is static target
 
+  if (ssrContext.url) {
+    ssrContext.url = ssrContext.url.split('?')[0]
+  }
+
   // Public runtime config
   ssrContext.nuxt.config = ssrContext.runtimeConfig.public
 if (ssrContext.nuxt.config._app) {
@@ -102,6 +106,12 @@ ssrContext.nuxt.routePath = app.context.route.path
 
         // Add the state from the vuex store
         ssrContext.nuxt.state = store.state
+
+      // Stop recording store mutations
+      // unsetMutationObserver is only set after all router middleware are evaluated
+      if (ssrContext.unsetMutationObserver) {
+        ssrContext.unsetMutationObserver()
+      }
     }
 }
 
@@ -169,6 +179,10 @@ const render404Page = () => {
   if (ssrContext.nuxt.error) {
     return renderErrorPage()
   }
+
+  // Record store mutations for full-static after nuxtServerInit and Middleware
+  ssrContext.nuxt.mutations =[]
+  ssrContext.unsetMutationObserver = store.subscribe(m => { ssrContext.nuxt.mutations.push([m.type, m.payload]) })
 
   /*
   ** Set layout
